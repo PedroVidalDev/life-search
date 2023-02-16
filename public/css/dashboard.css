@@ -1,0 +1,221 @@
+/* Gerais */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: none;
+}
+
+body{
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    background-image: url("/img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Nav Bar */
+a.menu{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 10px;
+    padding: 7px 13px;
+}
+
+a.menu:hover{
+    background: rgba(206, 168, 255, 0.541);
+}
+
+a.logo{
+    font-size: 40px;
+    letter-spacing: 4px;
+    color: #fff;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(24, 16, 34, 0.7);
+    backdrop-filter: blur(10px);
+    height: 10vh;
+    width: 100%;
+    z-index: 99;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 40px;
+}
+
+.mobile_menu{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile_menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+}
+
+/* Dashboard */
+section.home{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+p.title{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+div.projects-menu-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    overflow-y: scroll;
+}
+
+div.project-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+    border-radius: 10%;
+    margin: 20px 20px;
+    background-color: rgb(31, 0, 80);
+}
+
+img.project-image{
+    position: relative;
+    width: 220px;
+    height: 150px;
+    border-radius: 15%;
+    padding-top: 10px;
+    transition: .5s;
+}
+
+img.project-image:hover{
+    filter: brightness(150%);
+}
+
+p.project-title{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+p.project-owner{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+p.text-search{
+    color: white;
+    font-size: 30px;
+}
+
+button.excluir{
+    background: rgb(41, 0, 0);
+    border-color: rgb(218, 0, 0); 
+}
+
+button.editar{
+    background: rgb(0, 1, 41);
+    border-color: rgb(0, 17, 255); 
+}
+
+button.excluir, button.editar{
+    position: relative;
+    border-radius: 20px;
+    width: 220px;
+    height: 40px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    margin: 5px 0;
+}
+
+button.excluir:hover, button.editar:hover{
+    letter-spacing: 5px;
+}
+
+p.dashboard-title{
+    position: relative;
+    color: white;
+    font-size: 40px;
+}
+
+/* Responsividade da navbar */
+@media (max-width: 858px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+
+    nav{
+        background: rgb(12, 3, 24);
+    }
+
+    .nav-list{
+        position: fixed;
+        top: 10vh;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(22, 0, 53, 0.95);
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: .5s;
+    }
+
+    .nav-list.active{
+        backdrop-filter: blur(100px);
+        transform: translateX(0);
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        padding: 50px 0;
+    }
+
+    .mobile_menu{
+        display: block;
+    }
+}

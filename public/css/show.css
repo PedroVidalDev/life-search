@@ -1,0 +1,256 @@
+/* Gerais */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: none;
+}
+
+body{
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    background-image: url("/img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Nav Bar */
+a.menu{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 10px;
+    padding: 7px 13px;
+}
+
+a.menu:hover{
+    background: rgba(206, 168, 255, 0.541);
+}
+
+a.logo{
+    font-size: 40px;
+    letter-spacing: 4px;
+    color: #fff;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(24, 16, 34, 0.7);
+    backdrop-filter: blur(10px);
+    height: 10vh;
+    width: 100%;
+    z-index: 99;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 40px;
+}
+
+.mobile_menu{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile_menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+}
+
+/* Show */
+section.home{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+div.show-container{
+    position: relative;
+    display: flex;
+    margin-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.ajuste-project{
+    position: relative;
+    display: flex;
+}
+
+div.img-banner{
+    position: relative;
+    height: 80vh;
+    width: 300px;
+    margin: 0 30px;
+    border-radius: 10px;
+    background-position:50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.text-show{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+}
+
+p.title-show{
+    position: relative;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+}
+
+p.description-show, p.tec-show, p.repo-show{
+    position: relative;
+    font-size: 25px;
+    color: white;
+}
+
+p.tec-show{
+    margin-right: 5px;
+}
+
+p.repo-show{
+    color: #fff;
+    border-color: rgb(140, 0, 255);
+    transition: .5s;
+}
+
+p.repo-show:hover{
+    color: rgb(195, 66, 255);
+    text-decoration-line:underline;
+}
+
+div.items-show{
+    position: relative;
+    display: flex;
+}
+
+/* Comentarios */
+section.comment-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+div.commentary-send-div{
+    position: relative;
+}
+
+div.commentary-div{
+    position: relative;
+    margin-top: 20px;
+}
+
+p.title-commentary{
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+}
+
+input.commentary-input{
+    position: relative;
+    width: 70vw;
+    height: 30px;
+    border-radius: 10px;
+}
+
+input.submit{
+    position: relative;
+    width: 120px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 25px;
+    background: rgb(17, 0, 48);
+    color: white;
+    cursor: pointer;
+}
+
+p.indica-comentario{
+    position: relative;
+    margin-top: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+p.comment-title{
+    position: relative;
+    color: white;
+    font-size: 30px;
+}
+
+p.comment-body{
+    position: relative;
+    color: white;
+    font-size: 15px;
+}
+
+/* Responsividade da navbar */
+@media (max-width: 858px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+
+    nav{
+        background: rgb(12, 3, 24);
+    }
+
+    .nav-list{
+        position: fixed;
+        top: 10vh;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(22, 0, 53, 0.95);
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: .5s;
+    }
+
+    .nav-list.active{
+        backdrop-filter: blur(100px);
+        transform: translateX(0);
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        padding: 50px 0;
+    }
+
+    .mobile_menu{
+        display: block;
+    }
+}

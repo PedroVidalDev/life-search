@@ -1,0 +1,207 @@
+/* Gerais */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: none;
+}
+
+body{
+    font-family: 'Roboto';
+}
+
+/* Nav Bar */
+a.menu{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 10px;
+    padding: 7px 13px;
+}
+
+a.menu:hover{
+    background: rgba(206, 168, 255, 0.541);
+}
+
+a.logo{
+    font-size: 40px;
+    letter-spacing: 4px;
+    color: #fff;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(24, 16, 34, 0.7);
+    backdrop-filter: blur(10px);
+    height: 10vh;
+    width: 100%;
+    z-index: 99;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 40px;
+}
+
+.mobile_menu{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile_menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+}
+
+/* Create */
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+div.ajustador-create{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+div.ajustador-create-image{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.ajustador-image{
+    position: relative;
+    display: flex;
+    flex-direction: column
+}
+
+label{
+    position: relative;
+    color: white;
+    font-size: 30px;
+}
+
+div.container-create{
+    position: relative;
+    margin-top: 50px;
+    width: auto;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+input.title{
+    position: relative;
+    width: 800px;
+    height: 60px;
+    font-size: 40px;
+    background: rgb(21, 0, 61);
+    border: 0;
+    color: white;
+}
+
+input.repositorio{
+    position: relative;
+    width: 800px;
+    height: 20px;
+    background: rgb(21, 0, 61);
+    border: 0;
+    color: white;
+}
+
+textarea.description{
+    position: relative;
+    width: 800px;
+    height: 150px;
+    overflow-wrap: break-word;
+    border: 0;
+    resize: none;
+    font-size: 20px;
+    background: rgb(21, 0, 61);
+    color: white;
+}
+
+div.options{
+    color: white;
+}
+
+input.image{
+    color: white;
+}
+
+input.submit{
+    position: relative;
+    width: auto;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 25px;
+    background: rgb(35, 0, 99);
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsividade da Navbar */
+@media (max-width: 858px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+
+    nav{
+        background: rgb(12, 3, 24);
+    }
+
+    .nav-list{
+        position: fixed;
+        top: 10vh;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(22, 0, 53, 0.95);
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: .5s;
+    }
+
+    .nav-list.active{
+        backdrop-filter: blur(100px);
+        transform: translateX(0);
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        padding: 50px 0;
+    }
+
+    .mobile_menu{
+        display: block;
+    }
+}
