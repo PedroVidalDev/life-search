@@ -107,14 +107,14 @@ label{
 div.container-create{
     position: relative;
     margin-top: 50px;
-    width: auto;
+    width: 80vw;
     height: 500px;
     overflow-y: scroll;
 }
 
 input.title{
     position: relative;
-    width: 800px;
+    width: auto;
     height: 60px;
     font-size: 40px;
     background: rgb(21, 0, 61);
@@ -124,7 +124,7 @@ input.title{
 
 input.repositorio{
     position: relative;
-    width: 800px;
+    width: auto;
     height: 20px;
     background: rgb(21, 0, 61);
     border: 0;
@@ -133,7 +133,7 @@ input.repositorio{
 
 textarea.description{
     position: relative;
-    width: 800px;
+    width: auto;
     height: 150px;
     overflow-wrap: break-word;
     border: 0;

@@ -175,6 +175,7 @@ p.dashboard-title{
     position: relative;
     color: white;
     font-size: 40px;
+    text-align: center;
 }
 
 /* Responsividade da navbar */
@@ -217,5 +218,22 @@ p.dashboard-title{
 
     .mobile_menu{
         display: block;
+    }
+
+    div.projects-menu-container{
+        grid-template-areas:
+            "header header"
+            "main main"
+            "footer footer";
+    }
+    
+}
+
+@media (max-width: 624px){
+    div.projects-menu-container{
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
     }
 }

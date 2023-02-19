@@ -149,6 +149,26 @@ div.items-show{
     display: flex;
 }
 
+@media (max-width: 972px){
+    div.ajuste-project{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10vh;
+    }
+
+    div.img-banner{
+        height: 200px;
+        width: 80vw;
+    }
+
+    div.text-show{
+        width: 80vw;
+        height: 600px;
+    }
+}
+
 /* Comentarios */
 section.comment-section{
     position: relative;
@@ -195,7 +215,7 @@ input.submit{
 
 p.indica-comentario{
     position: relative;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 30px;
     color: white;
 }
