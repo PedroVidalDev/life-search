@@ -1,6 +1,8 @@
 # LifeSearch
 Projeto com o objetivo de criar um fórum para a postagem de projetos relacionados a tecnologia e facilitar o acesso de cidadão comum a esse tipo de conhecimento, utilizando o framework Laravel para criar a integração entre o backend e o frontend da aplicação web, utilizando ferramentas como ligação entre bancos de dados distintos e autenticação de usuários.
 
+Project with the objective of creating a forum for posting projects related to technology and facilitating the access of ordinary people to this type of knowledge, using the Laravel framework to create integration between the backend and frontend of the web application, using tools such as connection between different databases and user authentication.
+
 ## Linguagens utilizadas:
  - HTML
  - CSS
